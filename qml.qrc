@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/qml">
+        <file>resources/qml/Chessboard.qml</file>
+        <file>resources/qml/ChessPiece.qml</file>
+        <file>resources/qml/main.qml</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>resources/images/black_bishop.svg</file>
+        <file>resources/images/black_king.svg</file>
+        <file>resources/images/black_knight.svg</file>
+        <file>resources/images/black_pawn.svg</file>
+        <file>resources/images/black_queen.svg</file>
+        <file>resources/images/black_rook.svg</file>
+        <file>resources/images/chessboard.jpg</file>
+        <file>resources/images/white_bishop.svg</file>
+        <file>resources/images/white_king.svg</file>
+        <file>resources/images/white_knight.svg</file>
+        <file>resources/images/white_pawn.svg</file>
+        <file>resources/images/white_queen.svg</file>
+        <file>resources/images/white_rook.svg</file>
+    </qresource>
+</RCC>
