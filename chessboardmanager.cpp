@@ -179,10 +179,23 @@ void ChessboardManager::move(int startX, int startY, int endX, int endY)
     }
 }
 
+void ChessboardManager::setSquareSize()
+{
+    int oldSquareSize = m_squareSize;
+    m_squareSize = m_item->property("squareSize").toInt();
+    for (auto child : m_item->children()) {
+        int x = child->property("x").toInt() / oldSquareSize * m_squareSize;
+        int y = child->property("y").toInt() / oldSquareSize * m_squareSize;
+        child->setProperty("x", x);
+        child->setProperty("y", y);
+        child->setProperty("width", m_squareSize);
+    }
+}
+
 void ChessboardManager::getGameStateFromModel()
 {
-    setSquareSize();
     clearChessboard();
+    setSquareSize();
 
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
@@ -191,11 +204,6 @@ void ChessboardManager::getGameStateFromModel()
                 createChessPieceById(id, i, j);
         }
     }
-}
-
-void ChessboardManager::setSquareSize()
-{
-    m_squareSize = m_item->property("squareSize").toInt();
 }
 
 void ChessboardManager::clearChessboard()

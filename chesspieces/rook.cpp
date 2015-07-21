@@ -1,8 +1,8 @@
 #include "rook.h"
 
 Rook::Rook(const QString &color, const std::shared_ptr<Chessboard> chessboard
-           , QQmlApplicationEngine *engine, QQuickItem *parent, int row, int column)
-    : ChessPiece("rook", color, chessboard, engine, parent, row, column) {}
+           , QQmlApplicationEngine *engine, QQuickItem *parentItem, int row, int column)
+    : ChessPiece("rook", color, chessboard, engine, parentItem, row, column) {}
 
 Rook::~Rook() {}
 

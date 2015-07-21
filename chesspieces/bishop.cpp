@@ -1,8 +1,8 @@
 #include "bishop.h"
 
 Bishop::Bishop(const QString &color, const std::shared_ptr<Chessboard> chessboard
-               , QQmlApplicationEngine *engine, QQuickItem *parent, int row, int column)
-    : ChessPiece("bishop", color, chessboard, engine, parent, row, column) {}
+               , QQmlApplicationEngine *engine, QQuickItem *parentItem, int row, int column)
+    : ChessPiece("bishop", color, chessboard, engine, parentItem, row, column) {}
 
 Bishop::~Bishop() {}
 

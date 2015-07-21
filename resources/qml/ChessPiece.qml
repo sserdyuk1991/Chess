@@ -9,11 +9,14 @@ Image {
     MouseArea {
         anchors.fill: parent
         drag.target: parent
+        drag.maximumX: parent.parent.width
+        drag.maximumY: parent.parent.height
 
         property int startX
         property int startY
 
         onPressed: {
+            console.log(parent.parent.width, parent.parent.height)
             startX = parent.x + mouseX
             startY = parent.y + mouseY
         }

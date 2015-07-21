@@ -7,7 +7,7 @@ class King : public ChessPiece
 {
 public:
     King(const QString &color, const std::shared_ptr<Chessboard> chessboard
-         , QQmlApplicationEngine *engine, QQuickItem *parent, int row, int column);
+         , QQmlApplicationEngine *engine, QQuickItem *parentItem, int row, int column);
     ~King();
 
     bool isMoveAvailable(int startRow, int startColumn, int endRow, int endColumn) const override;

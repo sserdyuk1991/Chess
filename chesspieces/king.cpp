@@ -1,8 +1,8 @@
 #include "king.h"
 
 King::King(const QString &color, const std::shared_ptr<Chessboard> chessboard
-           , QQmlApplicationEngine *engine, QQuickItem *parent, int row, int column)
-    : ChessPiece("king", color, chessboard, engine, parent, row, column) {}
+           , QQmlApplicationEngine *engine, QQuickItem *parentItem, int row, int column)
+    : ChessPiece("king", color, chessboard, engine, parentItem, row, column) {}
 
 King::~King() {}
 

@@ -25,6 +25,7 @@ public:
     Q_INVOKABLE void prev();
     Q_INVOKABLE void next();
     Q_INVOKABLE void move(int startX, int startY, int endX, int endY);
+    Q_INVOKABLE void setSquareSize();
 
 signals:
 
@@ -32,7 +33,6 @@ public slots:
 
 private:
     void getGameStateFromModel();
-    void setSquareSize();
     void clearChessboard();
     void createChessPieceById(int id, int row, int column);
     int getIndex(int coordinate) const;

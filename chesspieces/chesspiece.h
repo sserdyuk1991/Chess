@@ -9,7 +9,7 @@ class ChessPiece
 {
 public:
     ChessPiece(const QString &type, const QString &color, const std::shared_ptr<Chessboard> chessboard
-               , QQmlApplicationEngine *engine, QQuickItem *parent, int row, int column);
+               , QQmlApplicationEngine *engine, QQuickItem *parentItem, int row, int column);
     virtual ~ChessPiece();
 
     const QString& type() const { return m_type; }

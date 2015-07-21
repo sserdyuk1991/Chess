@@ -14,37 +14,6 @@ ApplicationWindow {
         width: parent.height
     }
 
-    /*Item {
-        id: gameField
-        width: parent.height
-        height: width
-
-        property int pieceSize: width / 8
-
-//        Image {
-//            anchors.fill: parent
-//            source: "images/images/board.jpg"
-//        }
-
-        MouseArea {
-            property int startX;
-            property int startY;
-
-            anchors.fill: parent
-
-            onPressed: {
-                startX = mouseX
-                startY = mouseY
-            }
-
-            onReleased: {
-//                if (containsMouse)
-//                    Engine.move(startX, startY, mouseX, mouseY)
-            }
-        }
-//        onHeightChanged: Engine.sizeChanged()
-    }*/
-
     ColumnLayout {
         x: parent.height
         width: parent.width - parent.height
