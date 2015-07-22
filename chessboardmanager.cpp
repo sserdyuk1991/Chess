@@ -150,12 +150,16 @@ void ChessboardManager::move(int startX, int startY, int endX, int endY)
     int endRow = getIndex(endY);
     int endColumn = getIndex(endX);
 
+    int width = m_item->property("width").toInt();
+    int height = m_item->property("height").toInt();
+
     auto &firstObject = (*m_chessboard)[startRow][startColumn];
     const QString &color = firstObject->color();
     auto item = firstObject->item();
 
-    if (((startRow != endRow) || (startColumn != endColumn)) && (m_lastMoveColor != color)
-            && firstObject->isMoveAvailable(startRow, startColumn, endRow, endColumn)) {
+    if ((((endX > 0) && (endX < width)) && ((endY > 0) && (endY < height)))
+            && ((startRow != endRow) || (startColumn != endColumn)) && (m_lastMoveColor != color)
+            && (firstObject->isMoveAvailable(startRow, startColumn, endRow, endColumn))) {
         auto &secondObject = (*m_chessboard)[endRow][endColumn];
 
         if (secondObject != nullptr) {
