@@ -3,7 +3,7 @@
 
 #include "chesspieces/chesspiece.h"
 
-class Bishop : public ChessPiece
+class Bishop : virtual public ChessPiece
 {
 public:
     Bishop(const QString &color, const std::shared_ptr<Chessboard> chessboard

@@ -1,9 +1,10 @@
 #ifndef QUEEN_H
 #define QUEEN_H
 
-#include "chesspieces/chesspiece.h"
+#include "chesspieces/bishop.h"
+#include "chesspieces/rook.h"
 
-class Queen : public ChessPiece
+class Queen : public Bishop, public Rook
 {
 public:
     Queen(const QString &color, const std::shared_ptr<Chessboard> chessboard
